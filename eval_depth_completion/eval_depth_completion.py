@@ -25,6 +25,8 @@ import torch
 import cv2
 import numpy as np
 
+device = torch.device("cpu")
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Run eval of depth completion on synthetic data')
     parser.add_argument('-c', '--configFile', required=True, help='Path to config yaml file', metavar='path/to/config')

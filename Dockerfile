@@ -1,6 +1,5 @@
 # Base image
 FROM ubuntu:16.04
-
 # Set non-interactive mode
 ENV DEBIAN_FRONTEND=noninteractive
 

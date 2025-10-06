@@ -52,7 +52,8 @@ class InferenceOutlines():
         else:
             self.model.load_state_dict(checkpoint)
 
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        #self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.device = torch.device("cpu")
         self.model = self.model.to(self.device)
         self.model.eval()
 
@@ -171,7 +172,8 @@ class InferenceNormals():
         else:
             self.model.load_state_dict(checkpoint)
 
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        #self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.device = torch.device("cpu")
         self.model = self.model.to(self.device)
         self.model.eval()
 
@@ -306,7 +308,8 @@ class InferenceMasks():
             raise RuntimeError('Invalid Checkpoint. It does not contain "model_state_dict" in it:\n{}'.format(
                 checkpoint.keys()))
 
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        #self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.device = torch.device("cpu")
         self.model = self.model.to(self.device)
         self.model.eval()
 
