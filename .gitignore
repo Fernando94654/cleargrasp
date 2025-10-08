@@ -5,6 +5,7 @@ data/*
 !data/readme_images
 !data/sample_dataset
 !data/.gitkeep
+test_data/*
 
 .vscode/
 *.pyc
@@ -61,6 +62,8 @@ coverage.xml
 *.cover
 .hypothesis/
 .pytest_cache/
+eval_depth_completion/results*
+notes.txt
 
 # Translations
 *.mo
